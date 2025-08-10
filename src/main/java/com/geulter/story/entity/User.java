@@ -7,9 +7,11 @@ import jakarta.persistence.Id;
 public class User {
 
     @Id
-    private String userId;
+    private Long userId;
 
     private String userName;
+
+    private String userNickname;
 
     private String userPassword;
 }

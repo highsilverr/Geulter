@@ -18,7 +18,7 @@ public class RelayEntry {
     private int relayEntryDepth;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_id", nullable = true)
     private User user;
 
     @ManyToOne
@@ -26,7 +26,7 @@ public class RelayEntry {
     private RootPost rootPost;
 
     @OneToOne
-    @JoinColumn(name = "relay_entry_parent_id", nullable = false)
+    @JoinColumn(name = "relay_entry_parent_id", nullable = true)
     private RelayEntry relayEntry;
 
 }
