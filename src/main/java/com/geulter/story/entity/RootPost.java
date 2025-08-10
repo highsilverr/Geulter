@@ -1,10 +1,17 @@
 package com.geulter.story.entity;
 
+import com.geulter.story.entity.dto.RootPostRequestDTO;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 import java.time.ZonedDateTime;
 
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class RootPost {
 
     @Id
@@ -24,4 +31,13 @@ public class RootPost {
     @JoinColumn(name = "user_id", nullable = true)
     private User user;
 
+    public static RootPost of(String title, String content, String rootPostWriter, User user){
+        return builder()
+                .title(title)
+                .content(content)
+                .createdAt(ZonedDateTime.now())
+                .rootPostWriter(rootPostWriter)
+                .user(user)
+                .build();
+    }
 }
