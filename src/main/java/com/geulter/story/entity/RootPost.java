@@ -17,6 +17,9 @@ public class RootPost {
 
     private ZonedDateTime createdAt;
 
+    // 글쓴이 이름 (비회원도 고려)
+    private String rootPostWriter;
+
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = true)
     private User user;
