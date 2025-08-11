@@ -1,6 +1,5 @@
 package com.geulter.story.entity;
 
-import com.geulter.story.entity.dto.RootPostRequestDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

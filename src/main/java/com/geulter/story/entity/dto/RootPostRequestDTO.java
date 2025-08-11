@@ -1,5 +1,8 @@
 package com.geulter.story.entity.dto;
 
+import lombok.Getter;
+
+@Getter
 public class RootPostRequestDTO {
 
     private String title;
